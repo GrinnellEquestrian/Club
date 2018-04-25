@@ -1,0 +1,351 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Advanced Drill Team</title>
+    <link rel="icon" href="icon.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Lato|Rye');
+        /******************************************************************************************/
+        /**********************FOR NAVIGATION BAR**************************************************/
+        /******************************************************************************************/
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 10px;
+            background-color: white;
+        }
+
+        .navbar {
+            overflow: hidden;
+            background-color: #665EC2;
+            font-family: 'Rye', cursive;
+        }
+
+            .navbar a {
+                float: left;
+                font-size: 16px;
+                color: white;
+                background-color: #665EC2;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+        .dropdown {
+            float: left;
+            overflow: hidden;
+            font-family: 'Rye', cursive;
+        }
+
+            .dropdown .dropbtn {
+                font-size: 16px;
+                border: none;
+                outline: none;
+                color: white;
+                padding: 14px 16px;
+                font-family: 'Rye', cursive;
+                background-color: #665EC2;
+            }
+
+            .navbar a:hover, .dropdown:hover .dropbtn {
+                background-color: #dc143c;
+            }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            width: 30%;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+            .dropdown-content .header {
+                background-color: #dc143c;
+                padding: 0px;
+                color: white;
+            }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Create three equal columns that floats next to each other */
+        .column {
+            float: left;
+            width: 100%;
+            padding: 0px;
+            background-color: #dc143c;
+            height: 150px;
+        }
+
+            .column a {
+                float: none;
+                color: white;
+                background-color: #dc143c;
+                padding: 16px;
+                text-decoration: none;
+                display: block;
+                text-align: left;
+            }
+
+                .column a:hover {
+                    background-color: black;
+                }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+        @media (max-width: 600px) {
+            .column {
+                width: 100%;
+                height: auto;
+            }
+        }
+        /******************************************************************************************/
+        /****************************END OF NAVIGATION BAR FORMATTING******************************/
+        /******************************************************************************************/
+
+
+        /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
+        /*^^^^^^^^^^^^^^^^^^^^^^^^^^^HEADERS & PARAGRAPHS^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
+        /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
+        h1 { /*Page title*/
+            font-family: 'Rye', cursive;
+            font-size: 40px;
+            text-shadow: 3px 2px #dc143c;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: 100;
+            line-height: 40px;
+            text-transform: uppercase;
+        }
+
+        h2 {
+            font-family: 'Rye', cursive;
+            font-size: 36px;
+            line-height: 36px;
+            text-shadow: 3px 2px #72ecfa;
+            text-transform: uppercase;
+            font-weight: normal;
+        }
+
+        h3 {
+            font-family: 'Rye', cursive;
+            font-size: 30px;
+            line-height: 30px;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: bold;
+            line-height: 15.4px;
+            text-transform: uppercase;
+            background-color: #72ecfa;
+        }
+        /*The same as h3 but for the members with right-justified images*/
+        h5 {
+            font-family: 'Rye', cursive;
+            font-size: 30px;
+            line-height: 30px;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: bold;
+            line-height: 15.4px;
+            text-transform: uppercase;
+            background-color: #dc143c;
+        }
+
+        h4 {
+            font-family: 'Rye', cursive;
+            color: #dc143c;
+            font-size: 25px;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: bold;
+            line-height: 25px;
+            text-transform: uppercase;
+        }
+
+        p {
+            font-family: 'Lato', sans-serif;
+            font-size: 20px;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: 400;
+            line-height: 20px;
+        }
+        /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
+        /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^END OF HEADERS & PARAGRAPHS^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
+        /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
+
+
+        /*----------------------------------------------------------------------------------------*/
+        /*-----------------------------------RESPONSIVE TITLE-------------------------------------*/
+        /*----------------------------------------------------------------------------------------*/
+        @media (max-width: 600px) {
+            /* Styles for screen with max width of 600px */
+            header {
+                height: 250%;
+            }
+
+            .page_title {
+                margin: 0;
+                font-size: 255%;
+            }
+        }
+
+        @media (max-width: 320px) {
+            /* Styles for screen with max width of 320px */
+            header {
+                height: auto;
+            }
+
+            .page_title {
+                margin: 0;
+                font-size: 25px;
+                text-align: center;
+                line-height: 90px;
+            }
+        }
+
+        header {
+            width: 100%;
+            line-height: 1.2;
+        }
+
+        .page_title {
+            font-family: 'Rye', cursive;
+            font-size: 450%;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: 500;
+        }
+        /*----------------------------------------------------------------------------------------*/
+        /*-------------------------END OF RESPONSIVE TITLE FORMATTING-----------------------------*/
+        /*----------------------------------------------------------------------------------------*/
+
+        /*########################################################################################*/
+        /*########################## IMAGES ######################################################*/
+        /*########################################################################################*/
+
+        img {
+            border-radius: 0px;
+            margin: 0px 10px 0px 0px;
+        }
+
+        .image1 {
+            border: 5px solid #72ecfa;
+            width: 20%;
+            float: left;
+            box-shadow: 5px 5px #72ecfa;
+        }
+
+        .image2 {
+            border: 5px solid #dc143c;
+            width: 22%;
+            float: right;
+            box-shadow: 5px 5px #dc143c;
+        }
+
+        /*########################################################################################*/
+        /*########################## END OF IMAGES ###############################################*/
+        /*########################################################################################*/
+    </style>
+</head>
+<body>
+    <dev class="page_title">Grinnell Equestrian Club & Drill Team</dev>
+
+    <div class="navbar">
+        <a href="pageattempt2.html">Home</a>
+        <!--LESSONS DROPDOWN-->
+        <div class="dropdown">
+            <button class="dropbtn">
+                Lessons
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <div class="row">
+                    <div class="column">
+                        <a href="lessons.html">Taking Lessons</a>
+                        <a href="horses.html">Meet the Horses</a>
+                    </div><!--closing column-->
+                </div><!--closing row-->
+            </div><!--closing dropdown-content-->
+        </div><!--closing dropdown-->
+        <!--DRILL TEAM DROPDOWN-->
+        <div class="dropdown">
+            <button class="dropbtn">
+                Drill Team
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <div class="row">
+                    <div class="column">
+                        <a href="join.html">Join the Team</a>
+                        <a href="intermediate.html">Intermediate Team</a>
+                        <a href="advanced.html">Advanced Team</a>
+                    </div><!--closing column-->
+                </div><!--closing row-->
+            </div><!--closing dropdown-content-->
+        </div><!--closing dropdown-->
+        <a href="events.html">Events</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+
+    </div><!--closing navbar-->
+    <h1>Advanced Drill Team</h1>
+    <h2>Members</h2>
+    <img src="grace.jpg" class="image1" />
+    <h3>Grace</h3>
+    <p>
+        "Hello! I’m Grace, a Grinnell College alumna from Minnesota. I am a riding instructor at Triple V Stables and the coach of the two Grinnell College drill teams. I also have the pleasure of
+        riding my horse Ghost with the advanced team. It has been an honor to work with such talented and passionate young women and horses over the past few years and I’m very proud of the teams we
+        have this semester! I believe that drill team offers a safe, supportive community in which these young women can build lasting friendships and learn lifelong skills such as communication, teamwork,
+        patience, dedication, and perseverance."
+    </p>
+    <img src="alice.jpg" class="image2" />
+    <h5>Alice</h5>
+    <p>
+        "Hi! I’m Alice and I’m a second-year intended Spanish major and Environmental Studies concentrator from Maryland. This year I am riding Razz on the advanced team. Razz is an incredible horse,
+        she works so hard, plus she’s absolutely adorable! I love drill team because it is a fantastic group of people and horses! I feel so lucky to have found such a fun and dedicated group!"
+    </p><br />
+    <img src="maggie3.jpg" class="image1" />
+    <h3>Maggie</h3>
+    <p>
+        "I’m Maggie, a third-year intended Biology major and Environmental Studies concentrator from Connecticut. This is my third year on drill team and I ride Eclipse on the advanced team. My favorite part
+        about him is how much enthusiasm and energy he brings every day, even if it means we often struggle to stand still! He’s also super sweet and wants to be friends with everyone he meets. Drill team lets
+        me hang around horses with people who love them as much as I do. I’ve been riding for over half my life and am thrilled to find such a cool group of people (and horses!) to work and ride with!"
+    </p>
+    <img src="anna.jpg" class="image2" />
+    <h5>Anna</h5>
+    <p>
+        "Hi, my name is Anna and I’m from Wisconsin. I’m a second-year Political Science major with an Environmental Studies concentration and I ride Cupcake on the advanced drill team. This is my second
+        year of drill and I’m so grateful for the wonderful opportunity that is drill team and I’m so glad to be riding alongside some amazing people! This year I am extremely fortunate to be able to ride
+        my own sassy mare on drill. Cupcake, in three words, is sassy, food-motivated and adorable (although she occasionally uses her cuteness for evil). I joined drill because I wanted a way to still be
+        involved with horses when I first got to Grinnell. Drill, however, has really become a staple part of my week (and life here at Grinnell) and I’m grateful I got to introduce Cupcake to the awesomeness
+        that is the Grinnell College Drill Team!"
+    </p>
+    <img src="alissa.jpg" class="image1" />
+    <h3>Alissa</h3>
+    <p>
+        "Hi! My name is Alissa and I’m a second-year at Grinnell. I was born in Paris and moved to Shanghai when I was ten, but my family now lives in Sydney, Australia. I plan to be an Economics and
+        Computer Science double major and I ride Chino on the advanced team. Even though he’s new to drill team, Chino is adorable and a fast learner! I love horseback riding and have been taking dressage
+        lessons since lower school. Though switching to Western for drill team was a bit of a challenge at first, I’m incredibly grateful that I can still interact with horses here at Grinnell and be a part
+        of our little community of horse-lovers."
+    </p>
+    <img src="natalie.jpg" class="image2" />
+    <h5>Natalie</h5>
+    <p>
+        "Hello! I’m Natalie, a fourth-year studying Sociology and interested in a career in education. I’m from Omaha, Nebraska. I joined the drill team two years ago to interact with positive people, challenge
+        myself, and relax and have fun while riding. I ride Blue on the advanced team and he seems to love drill team as much as I do! The vibrant, hardworking, and sometimes ridiculous personalities of my fellow
+        teammates and our horses make our practices the highlight of my week."
+    </p>
+</body>
+</html>

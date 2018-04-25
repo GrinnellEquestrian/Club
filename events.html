@@ -1,0 +1,389 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Events</title>
+    <link rel="icon" href="icon.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Lato|Rye');
+        /******************************************************************************************/
+        /**********************FOR NAVIGATION BAR**************************************************/
+        /******************************************************************************************/
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 10px;
+            background-color: white;
+        }
+
+        .navbar {
+            overflow: hidden;
+            background-color: #665EC2;
+            font-family: 'Rye', cursive;
+        }
+
+            .navbar a {
+                float: left;
+                font-size: 16px;
+                color: white;
+                background-color: #665EC2;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+        .dropdown {
+            float: left;
+            overflow: hidden;
+            font-family: 'Rye', cursive;
+        }
+
+            .dropdown .dropbtn {
+                font-size: 16px;
+                border: none;
+                outline: none;
+                color: white;
+                padding: 14px 16px;
+                font-family: 'Rye', cursive;
+                background-color: #665EC2;
+            }
+
+            .navbar a:hover, .dropdown:hover .dropbtn {
+                background-color: #dc143c;
+            }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            width: 30%;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+            .dropdown-content .header {
+                background-color: #dc143c;
+                padding: 0px;
+                color: white;
+            }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Create three equal columns that floats next to each other */
+        .column {
+            float: left;
+            width: 100%;
+            padding: 0px;
+            background-color: #dc143c;
+            height: 150px;
+        }
+
+            .column a {
+                float: none;
+                color: white;
+                background-color: #dc143c;
+                padding: 16px;
+                text-decoration: none;
+                display: block;
+                text-align: left;
+            }
+
+                .column a:hover {
+                    background-color: black;
+                }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+        @media (max-width: 600px) {
+            .column {
+                width: 100%;
+                height: auto;
+            }
+        }
+        /******************************************************************************************/
+        /****************************END OF NAVIGATION BAR FORMATTING******************************/
+        /******************************************************************************************/
+
+
+        /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
+        /*^^^^^^^^^^^^^^^^^^^^^^^^^^^HEADERS & PARAGRAPHS^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
+        /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
+        h1 { /*Page title*/
+            font-family: 'Rye', cursive;
+            font-size: 40px;
+            text-shadow: 3px 2px #dc143c;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: 100;
+            line-height: 40px;
+            text-transform: uppercase;
+        }
+
+        h2 {
+            font-family: 'Rye', cursive;
+            font-size: 36px;
+            line-height: 36px;
+            text-shadow: 3px 2px #72ecfa;
+            text-transform: uppercase;
+            font-weight: normal;
+        }
+
+        h3 {
+            font-family: 'Rye', cursive;
+            font-size: 30px;
+            line-height: 30px;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: bold;
+            line-height: 15.4px;
+            text-transform: uppercase;
+            background-color: #dc143c;
+        }
+
+        h4 {
+            font-family: 'Rye', cursive;
+            color: #dc143c;
+            font-size: 25px;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: bold;
+            line-height: 25px;
+            text-transform: uppercase;
+        }
+
+        p {
+            font-family: 'Lato', sans-serif;
+            font-size: 20px;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: 400;
+            line-height: 20px;
+        }
+        /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
+        /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^END OF HEADERS & PARAGRAPHS^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
+        /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
+
+
+        /*----------------------------------------------------------------------------------------*/
+        /*-----------------------------------RESPONSIVE TITLE-------------------------------------*/
+        /*----------------------------------------------------------------------------------------*/
+        @media (max-width: 600px) {
+            /* Styles for screen with max width of 600px */
+            header {
+                height: 250%;
+            }
+
+            .page_title {
+                margin: 0;
+                font-size: 255%;
+            }
+        }
+
+        @media (max-width: 320px) {
+            /* Styles for screen with max width of 320px */
+            header {
+                height: auto;
+            }
+
+            .page_title {
+                margin: 0;
+                font-size: 25px;
+                text-align: center;
+                line-height: 90px;
+            }
+        }
+
+        header {
+            width: 100%;
+            line-height: 1.2;
+        }
+
+        .page_title {
+            font-family: 'Rye', cursive;
+            font-size: 450%;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: 500;
+        }
+        /*----------------------------------------------------------------------------------------*/
+        /*-------------------------END OF RESPONSIVE TITLE FORMATTING-----------------------------*/
+        /*----------------------------------------------------------------------------------------*/
+
+        /*%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*/
+        /*%%%%%%%%%%%%%%%%%%%%%%%% LINK FORMATTING %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*/
+        /*%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*/
+
+
+        l {
+            color: #dc143c;
+        }
+            /* unvisited link */
+            l:link {
+                color: #dc143c;
+            }
+            /* visited link */
+            l:visited {
+                color: #665EC2;
+            }
+
+            /* mouse over link */
+            l:hover {
+                color: #72ecfa;
+            }
+
+            /* selected link */
+            l:active {
+                color: #72ecfa;
+            }
+        /*%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*/
+        /*%%%%%%%%%%%%%%%%%%%%%%%% END OF LINK FORMATTING %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*/
+        /*%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*/
+
+
+        /*########################################################################################*/
+        /*########################## IMAGES ######################################################*/
+        /*########################################################################################*/
+        .image1 {
+            border: 4px solid #665EC2;
+            border-radius: 4px;
+            width: 35%;
+            float: right;
+            margin: 0px 10px 0px 0px;
+        }
+
+        .image2 {
+            border: 4px solid #72ecfa;
+            border-radius: 4px;
+            width: 22%;
+            margin: 10px 10px 0px 0px;
+            float: right;
+        }
+
+        .image3 {
+            border: 4px solid #665EC2;
+            border-radius: 4px;
+            width: 25%;
+            margin: 0px 10px 0px 0px;
+            float: right;
+        }
+        /*########################################################################################*/
+        /*########################## END OF IMAGES ###############################################*/
+        /*########################################################################################*/
+    </style>
+</head>
+<body>
+    <dev class="page_title">Grinnell Equestrian Club & Drill Team</dev>
+
+    <div class="navbar">
+        <a href="pageattempt2.html">Home</a>
+        <!--LESSONS DROPDOWN-->
+        <div class="dropdown">
+            <button class="dropbtn">
+                Lessons
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <div class="row">
+                    <div class="column">
+                        <a href="lessons.html">Taking Lessons</a>
+                        <a href="horses.html">Meet the Horses</a>
+                    </div><!--closing column-->
+                </div><!--closing row-->
+            </div><!--closing dropdown-content-->
+        </div><!--closing dropdown-->
+        <!--DRILL TEAM DROPDOWN-->
+        <div class="dropdown">
+            <button class="dropbtn">
+                Drill Team
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <div class="row">
+                    <div class="column">
+                        <a href="join.html">Join the Team</a>
+                        <a href="intermediate.html">Intermediate Team</a>
+                        <a href="advanced.html">Advanced Team</a>
+                    </div><!--closing column-->
+                </div><!--closing row-->
+            </div><!--closing dropdown-content-->
+        </div><!--closing dropdown-->
+        <a href="events.html">Events</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+
+    </div><!--closing navbar-->
+    <img src="Crowd.jpg" class="image2" />
+    <img src="Crowd2.jpg" class="image2" />
+    <h1>Events</h1>
+
+
+    <p>
+        The drill team holds seven total events per year: 2 open practices, 2 performances at Triple V Stables, 1 weekend performing at the Iowa Horse Fair, and 2 bake sales.
+        All events are  open to Grinnell students as well as the public. Attending all events is free*, as are all food and activities at the events. There's never a need to get tickets** or RSVP in any way. Just show up,
+        we'd love to have you!
+    </p>
+    <h2>Types of Events</h2>
+    <h3>Open Practices</h3>
+
+    <p>
+        Our first events every year are the open practices. These occur during family weekend because they are the perfect opportunity for parents to see the barn and watch an ordinary
+        practice. Any students who are considering joining drill team should come as well. Of course, all Grinnell students are welcome. There are two events, one for intermediate team, the
+        other for advanced team, and both are scheduled during their teams' normal practice times. This is the only event at Triple V which does not include food or rides to/from campus.
+    </p>
+    <img src="20160422_194101.jpg" class="image1" />
+    <h3>Performances at Triple V Stables</h3>
+
+    <p>
+        These performances occur twice a year: once near the end of first semester, once near the end of second semester. They are the culmination of a semester's hard work, so each team
+        is excited to perform its drill. After the perfomances, there are pony rides, and attendees can meet the miniature ponies. Then a gigantic bonfire is lit, and attendees make smore's.
+        Food is provided throughout the event. Cats (usually about a dozen, mostly kittens) and a dog roam the premises, and attendees are welcome to pet them. Free rides are provided from
+        Grinnell's campus to Triple V.
+    </p>
+    <h3>Performances at the Iowa Horse Fair</h3>
+    <p>
+        When we can fundraise enough money, both drill teams go to the <b><l href="link" target="http://iowahorsecouncil.org/2018-iowa-horse-fair/">Iowa Horse Fair</l></b> in Des Moines.
+        Anybody who wants to support the team is welcome to come see us perform! It's a wonderful fair for anybody with interest in horses. <br /><br /> Typically,
+        the intermediate team performs one night, and the advanced team performs two nights. We stay in a hotel near the fairgrounds. It's easily the highlight of our spring semesters, since we
+        get to see many other performers and workshops, spend a lot of time together, and, of course, perform in front of a bigger audience than we can in Grinnell. We get to meet
+        other drill teams, such as the Red Rock Riders, and enjoy the sense of community at the fair. <br /><br /><strong>
+            We haven't yet raised enough money to attend fair this year, so we would welcome
+            donations. Please contact us at equestrian@grinnell.edu if you would like to make a donation.  We are incredibly thankful for everybody who donates or participates in
+            our fundraisers, since you're the ones who let us perform. We couldn't do this without you!
+        </strong>
+    </p>
+    <h3>Bake Sales</h3>
+    <p>
+        Bake sales are held twice a year to raise money for the Iowa Horse Fair performances. We bake cupcakes, cookies, brownies, and fudge. We make around a hundred baked goods, which is
+        quite an undertaking in a dorm kitchen!
+        We sell our baked goods at a table in JRC for about a week or until we run out of food to sell.
+    </p>
+    <h2>Upcoming Events</h2>
+    <h3>Open Practices</h3>
+    <p>This is a fall-only event; check back in a few months!</p>
+    <h3>Performances at Triple V Stables</h3>
+    <p>A date has not yet been chosen, but there will be a performance on a Friday or Saturday in one of the last weeks of this semester.</p>
+    <h3>Performances at the Iowa Horse Fair</h3>
+    <p>If we receive enough funds, we will perform this year. The fair is April 6-8, and we will perform every night. Times and more detailed information will be posted when they're available. </p>
+    <h3>Bake Sales</h3>
+    <p>There will be one before spring break, but the date hasn't been set yet.</p>
+    <h2>Photos and Videos from Past Events</h2>
+    <h3>2017-2018 School Year</h3>
+    <h3>2016-2017 School Year</h3>
+    <h3>2015-2016 School Year</h3>
+    <br /><br /><small>
+        *Not including the Iowa Horse Fair, since tickets to the fair cost money, and food/activities at the fair cost money. Also doesn't include the bake sale for obvious reasons.
+        <br /><br />
+        **Attending the Iowa Horse Fair performances does require a ticket because you can't get into the fair without one.
+    </small>
+</body>
+</html>

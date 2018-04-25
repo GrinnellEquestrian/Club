@@ -1,0 +1,332 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>About</title>
+    <link rel="icon" href="icon.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Lato|Rye');
+        /******************************************************************************************/
+        /**********************FOR NAVIGATION BAR**************************************************/
+        /******************************************************************************************/
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 10px;
+            background-color: white;
+        }
+
+        .navbar {
+            overflow: hidden;
+            background-color: #665EC2;
+            font-family: 'Rye', cursive;
+        }
+
+            .navbar a {
+                float: left;
+                font-size: 16px;
+                color: white;
+                background-color: #665EC2;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+        .dropdown {
+            float: left;
+            overflow: hidden;
+            font-family: 'Rye', cursive;
+        }
+
+            .dropdown .dropbtn {
+                font-size: 16px;
+                border: none;
+                outline: none;
+                color: white;
+                padding: 14px 16px;
+                font-family: 'Rye', cursive;
+                background-color: #665EC2;
+            }
+
+            .navbar a:hover, .dropdown:hover .dropbtn {
+                background-color: #dc143c;
+            }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            width: 30%;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+            .dropdown-content .header {
+                background-color: #dc143c;
+                padding: 0px;
+                color: white;
+            }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Create three equal columns that floats next to each other */
+        .column {
+            float: left;
+            width: 100%;
+            padding: 0px;
+            background-color: #dc143c;
+            height: 150px;
+        }
+
+            .column a {
+                float: none;
+                color: white;
+                background-color: #dc143c;
+                padding: 16px;
+                text-decoration: none;
+                display: block;
+                text-align: left;
+            }
+
+                .column a:hover {
+                    background-color: black;
+                }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+        @media (max-width: 600px) {
+            .column {
+                width: 100%;
+                height: auto;
+            }
+        }
+        /******************************************************************************************/
+        /****************************END OF NAVIGATION BAR FORMATTING******************************/
+        /******************************************************************************************/
+
+
+        /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
+        /*^^^^^^^^^^^^^^^^^^^^^^^^^^^HEADERS & PARAGRAPHS^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
+        /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
+        h1 { /*Page title*/
+            font-family: 'Rye', cursive;
+            font-size: 40px;
+            text-shadow: 3px 2px #dc143c;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: 100;
+            line-height: 40px;
+            text-transform: uppercase;
+        }
+
+        h2 {
+            font-family: 'Rye', cursive;
+            font-size: 36px;
+            line-height: 36px;
+            text-shadow: 3px 2px #72ecfa;
+            text-transform: uppercase;
+            font-weight: normal;
+        }
+
+        h3 {
+            font-family: 'Rye', cursive;
+            font-size: 30px;
+            line-height: 30px;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: bold;
+            line-height: 15.4px;
+            text-transform: uppercase;
+            background-color: #dc143c;
+        }
+
+        h4 {
+            font-family: 'Rye', cursive;
+            color: #dc143c;
+            font-size: 25px;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: bold;
+            line-height: 25px;
+            text-transform: uppercase;
+        }
+
+        p {
+            font-family: 'Lato', sans-serif;
+            font-size: 20px;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: 400;
+            line-height: 20px;
+        }
+        /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
+        /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^END OF HEADERS & PARAGRAPHS^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
+        /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
+
+
+        /*----------------------------------------------------------------------------------------*/
+        /*-----------------------------------RESPONSIVE TITLE-------------------------------------*/
+        /*----------------------------------------------------------------------------------------*/
+        @media (max-width: 600px) {
+            /* Styles for screen with max width of 600px */
+            header {
+                height: 250%;
+            }
+
+            .page_title {
+                margin: 0;
+                font-size: 255%;
+            }
+        }
+
+        @media (max-width: 320px) {
+            /* Styles for screen with max width of 320px */
+            header {
+                height: auto;
+            }
+
+            .page_title {
+                margin: 0;
+                font-size: 25px;
+                text-align: center;
+                line-height: 90px;
+            }
+        }
+
+        header {
+            width: 100%;
+            line-height: 1.2;
+        }
+
+        .page_title {
+            font-family: 'Rye', cursive;
+            font-size: 450%;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: 500;
+        }
+        /*----------------------------------------------------------------------------------------*/
+        /*-------------------------END OF RESPONSIVE TITLE FORMATTING-----------------------------*/
+        /*----------------------------------------------------------------------------------------*/
+
+        /*########################################################################################*/
+        /*########################## IMAGES ######################################################*/
+        /*########################################################################################*/
+
+        img {
+            border-radius: 0px;
+            margin: 0px 10px 0px 0px;
+        }
+
+        .image1 {
+            border: 5px solid #665EC2;
+            width: 40%;
+            float: right;
+            box-shadow: 5px 5px #72ecfa;
+        }
+
+        .image2 {
+            border: 5px solid #665EC2;
+            width: 40%;
+            float: left;
+            box-shadow: 5px 5px #72ecfa;
+        }
+
+        /*########################################################################################*/
+        /*########################## END OF IMAGES ###############################################*/
+        /*########################################################################################*/
+    </style>
+</head>
+<body>
+    <dev class="page_title">Grinnell Equestrian Club & Drill Team</dev>
+
+    <div class="navbar">
+        <a href="pageattempt2.html">Home</a>
+        <!--LESSONS DROPDOWN-->
+        <div class="dropdown">
+            <button class="dropbtn">
+                Lessons
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <div class="row">
+                    <div class="column">
+                        <a href="lessons.html">Taking Lessons</a>
+                        <a href="horses.html">Meet the Horses</a>
+                    </div><!--closing column-->
+                </div><!--closing row-->
+            </div><!--closing dropdown-content-->
+        </div><!--closing dropdown-->
+        <!--DRILL TEAM DROPDOWN-->
+        <div class="dropdown">
+            <button class="dropbtn">
+                Drill Team
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <div class="row">
+                    <div class="column">
+                        <a href="join.html">Join the Team</a>
+                        <a href="intermediate.html">Intermediate Team</a>
+                        <a href="advanced.html">Advanced Team</a>
+                    </div><!--closing column-->
+                </div><!--closing row-->
+            </div><!--closing dropdown-content-->
+        </div><!--closing dropdown-->
+        <a href="events.html">Events</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+
+    </div><!--closing navbar-->
+
+    <h1>About</h1>
+    <img src="firstpractice.jpg" class="image1" />
+    <p>
+        The Grinnell Equestrian Club is a student-run organization that's affiliated with Grinnell College. It's in its third year and shows no signs of ending any time soon, since it grows every year! It gives Grinnell students the 
+        chance to take riding lessons and join a drill team. 
+    </p>
+    <h2>History of the Club</h2>
+    <h3>2015-2016</h3>
+
+    <p>
+        Three years ago, Grace had an idea which would change the lives of Grinnell's horse lovers. She'd boarded her horse, Honey, at Triple V Stables in Grinnell for her first two years at Grinnell. But
+        it was lonely; no other Grinnell students rode or boarded there. To find other equestrians at Grinnell, she wanted to teach riding lessons and start a drill team. Even though she could bring her sister's horse, Eclipse,
+        to Grinnell, she still only had two horses. However, Don loved her idea, and he generously offered to let her use his horses and arena. Some other boarders at Triple V were excited about the idea, and they let
+        drill team use their horses. <br/><br/>The drill team started out gigantic: 8 horses and riders, to be exact. As with most new clubs, the number of members fluctuated at first, and there were 6 by the end of the semester.
+        The team had its first performance and bonfire at Triple V in November 2015. It also had a successful spring semester and performance at the end of the year. <br /><br /> Fun fact: Four of those members are still on drill team! They include Maggie
+        (pictured third from the left), Natalie (pictured fourth from the right), Rachel (pictured third from the right), and Grace (pictured on the far right). <br /><br />
+
+
+        <h3>2016-2017</h3>
+<p>
+        In the team's second year, it was flooded by new members. Some horses were no longer available, so the team had access to six horses for its ten riders.
+        Grace decided to split the team into two pieces: the intermediate team and the advanced team. Newcomers would be on the intermediate team, and everyone else would be on the advanced team.
+        This worked perfectly, allowing each team to improve at its own pace, and since neither team needed all six available horses, they had room to be a bit more selective about which horses were best for drill team.
+    </p>
+    <img src="wholeTeam.jpg" class="image2" />
+    <p>
+        Early that year, the club started having trouble with funding. It was funded by Grinnell College in its first year, but since the club was so popular, it had become more costly to support. After countless
+        meetings with the college and two huge bake sales, the club kept itself afloat. It ended the semester with a performance at Triple V Stables. <br /><br />
+
+    <p>
+        Spring semester, both drill teams had the chance to perform at the Iowa Horse Fair. To prepare, they stayed on campus for half of spring break, riding, working, and having fun at the barn every day.
+        On March 31st, both teams woke at 5AM to load all the horses into trailers and leave for Des Moines. It was the beginning of three days full of shows, performances, and memories, only lacking in sleep.
+        Everyone agreed that the team had to come back next year, and everyone was incredibly thankful for the donations which made the weekend possible.
+        <br/><br/>
+        For its May performance, the club had its first fully-outdoor show, utilizing the huge grass arena. There was also a beginner drill team, which included 11 kids, aged 5-11, riding with drill team members
+        walking by their side. It was an adorable and fun event for everyone. <br />
+
+    </p>
+
+</body>
+</html>

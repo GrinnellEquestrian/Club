@@ -1,0 +1,362 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Meet the Horses</title>
+                <link rel="icon" href="icon.png">
+
+    <style>
+
+        @import url('https://fonts.googleapis.com/css?family=Lato|Rye');
+        /******************************************************************************************/
+        /**********************FOR NAVIGATION BAR**************************************************/
+        /******************************************************************************************/
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 10px;
+            background-color: white;
+        }
+
+        .navbar {
+            overflow: hidden;
+            background-color: #665EC2;
+            font-family: 'Rye', cursive;
+        }
+
+            .navbar a {
+                float: left;
+                font-size: 16px;
+                color: white;
+                background-color: #665EC2;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+        .dropdown {
+            float: left;
+            overflow: hidden;
+            font-family: 'Rye', cursive;
+        }
+
+            .dropdown .dropbtn {
+                font-size: 16px;
+                border: none;
+                outline: none;
+                color: white;
+                padding: 14px 16px;
+                font-family: 'Rye', cursive;
+                background-color: #665EC2;
+            }
+
+            .navbar a:hover, .dropdown:hover .dropbtn {
+                background-color: #dc143c;
+            }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            width: 30%;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+            .dropdown-content .header {
+                background-color: #dc143c;
+                padding: 0px;
+                color: white;
+            }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Create three equal columns that floats next to each other */
+        .column {
+            float: left;
+            width: 100%;
+            padding: 0px;
+            background-color: #dc143c;
+            height: 150px;
+        }
+
+            .column a {
+                float: none;
+                color: white;
+                background-color: #dc143c;
+                padding: 16px;
+                text-decoration: none;
+                display: block;
+                text-align: left;
+            }
+
+                .column a:hover {
+                    background-color: black;
+                }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+        @media (max-width: 600px) {
+            .column {
+                width: 100%;
+                height: auto;
+            }
+        }
+        /******************************************************************************************/
+        /****************************END OF NAVIGATION BAR FORMATTING******************************/
+        /******************************************************************************************/
+
+
+        /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
+        /*^^^^^^^^^^^^^^^^^^^^^^^^^^^HEADERS & PARAGRAPHS^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
+        /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
+        h1 { /*Page title*/
+            font-family: 'Rye', cursive;
+            font-size: 40px;
+            text-shadow: 3px 2px #dc143c;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: 100;
+            line-height: 40px;
+            text-transform: uppercase;
+        }
+
+        h2 {
+            font-family: 'Rye', cursive;
+            font-size: 36px;
+            line-height: 36px;
+            text-shadow: 3px 2px #72ecfa;
+            text-transform: uppercase;
+            font-weight: normal;
+        }
+
+        h3 {
+            font-family: 'Rye', cursive;
+            font-size: 30px;
+            line-height: 30px;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: bold;
+            line-height: 15.4px;
+            text-transform: uppercase;
+            background-color: #dc143c;
+        }
+
+        h4 {
+            font-family: 'Rye', cursive;
+            color: #dc143c;
+            font-size: 25px;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: bold;
+            line-height: 25px;
+            text-transform: uppercase;
+        }
+
+        p {
+            font-family: 'Lato', sans-serif;
+            font-size: 20px;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: 400;
+            line-height: 20px;
+        }
+        /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
+        /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^END OF HEADERS & PARAGRAPHS^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
+        /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
+
+
+        /*----------------------------------------------------------------------------------------*/
+        /*-----------------------------------RESPONSIVE TITLE-------------------------------------*/
+        /*----------------------------------------------------------------------------------------*/
+        @media (max-width: 600px) {
+            /* Styles for screen with max width of 600px */
+            header {
+                height: 250%;
+            }
+
+            .page_title {
+                margin: 0;
+                font-size: 255%;
+            }
+        }
+
+        @media (max-width: 320px) {
+            /* Styles for screen with max width of 320px */
+            header {
+                height: auto;
+            }
+
+            .page_title {
+                margin: 0;
+                font-size: 25px;
+                text-align: center;
+                line-height: 90px;
+            }
+        }
+
+        header {
+            width: 100%;
+            line-height: 1.2;
+        }
+
+        .page_title {
+            font-family: 'Rye', cursive;
+            font-size: 450%;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: 500;
+        }
+        /*----------------------------------------------------------------------------------------*/
+        /*-------------------------END OF RESPONSIVE TITLE FORMATTING-----------------------------*/
+        /*----------------------------------------------------------------------------------------*/
+
+
+        /*########################################################################################*/
+        /*########################## IMAGES ######################################################*/
+        /*########################################################################################*/
+        
+
+        .image1 {
+            border: 2px solid black;
+            border-radius: 4px;
+            margin: 0px 0px 0px 0px;
+            width: 450px;
+            height: 150px;
+        }
+
+        .image2 {
+            width: 379px;
+            margin: 0px 0px 0px 0px;
+            height: 300px;
+            border: 4px solid #72ecfa;
+            box-shadow: 3px 3px #72ecfa;
+        }
+
+        .image3 {
+            width: 30%;
+            height: 10%;
+            border-radius: 4px;
+            margin: 0px 0px 0px 0px;
+            height: 26.7%;
+            border: 2px solid black;
+            border: 4px solid #665EC2;
+            box-shadow: 3px 3px #665EC2;
+        }
+
+        .image4 {
+            width: 20%;
+            margin: 0px 0px 0px 0px;
+            border: 4px solid #72ecfa;
+            box-shadow: 3px 3px #72ecfa;
+        }
+        /*########################################################################################*/
+        /*########################## END OF IMAGES ###############################################*/
+        /*########################################################################################*/
+    </style>
+</head>
+<body>
+     <dev class="page_title">Grinnell Equestrian Club & Drill Team</dev>
+
+    <div class="navbar">
+        <a href="pageattempt2.html">Home</a>
+        <!--LESSONS DROPDOWN-->
+        <div class="dropdown">
+            <button class="dropbtn">
+                Lessons
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <div class="row">
+                    <div class="column">
+                        <a href="lessons.html">Taking Lessons</a>
+                        <a href="horses.html">Meet the Horses</a>
+                    </div><!--closing column-->
+                </div><!--closing row-->
+            </div><!--closing dropdown-content-->
+        </div><!--closing dropdown-->
+        <!--DRILL TEAM DROPDOWN-->
+        <div class="dropdown">
+            <button class="dropbtn">
+                Drill Team
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <div class="row">
+                    <div class="column">
+                        <a href="join.html">Join the Team</a>
+                        <a href="intermediate.html">Intermediate Team</a>
+                        <a href="advanced.html">Advanced Team</a>
+                    </div><!--closing column-->
+                </div><!--closing row-->
+            </div><!--closing dropdown-content-->
+        </div><!--closing dropdown-->
+        <a href="events.html">Events</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+
+    </div><!--closing navbar-->
+    <h1>Meet the Horses</h1>
+    <p>If you sign up for lessons, these are the horses you're most likely to ride. Of course, there are more horses on drill team than just these.
+        Those horses' riders introduce them on the drill team pages. 
+    </p>
+    <h3>Blue</h3>
+    
+       
+    <img src="bloo.jpg", class="image3" />
+    <img src="16729318_1646408695374823_6323946163786074932_n.jpg", class="image4" />
+    <img src="19105847_1793621590653532_5152034524411372005_n.jpg", class="image3" />
+    <p>
+        Blue, lovingly known as "Blue Da Dude", is one of the most cheerful horses in equestrian club. Everything is fun to him, and he's always 
+        gentle and kind. If his rider wants him to slow down, he'll be the most obedient horse on the planet; if they want him to speed up, 
+        Blue will need a bit more persuasion. He's the most popular horse for lessons, since he's forgiving with beginners but a stricter 
+        teacher for his advanced riders, so he has something to teach anyone. He came from the same home as Razz, and the two of them are still 
+        good friends. He gets his name from his bright blue eye, but contrary to popular myths, that blue eye isn't an indication that he's blind! 
+        Blue can see perfectly, and he would like his riders to know that peppermints, pears, and butterscotch candies are the fastest way 
+        to his heart. Blue belongs to Don Van Dyke. 
+    </p>
+    <h3>Lexus</h3>
+     <img src="22780369_1947178715297818_8769479375115128351_n.jpg", class="image3" /> 
+    <img src="22852109_1947180091964347_808383320142815002_n.jpg", class="image4" /> 
+     <img src="22769697_1947179675297722_5988335955442394824_o.jpg", class="image3" />  
+     
+    <p>
+        Lexus is the biggest personality on equestrian club, thanks to her unmatched intelligence. She's incredibly calm and docile in lessons, 
+        so together with Blue, they account for the vast majority of equestrian club lessons. She can be a frustrating horse to ride at first, but
+        once a rider has earned her respect, riding her is like driving a sportscar; she's incredibly well trained, physically fit, and a smooth, fun ride. She will teach her riders to ride more like western pleasure riders, 
+        and she's been known to give her riders "legs of steel." She has a lot to teach anyone, and that's what makes her a great horse for 
+        equestrian club. Lexus belongs to Don Van Dyke. 
+    </p>
+     <h3>Razz</h3>
+    <img src="Razz-Bridget.jpg", class="image3" /> 
+        <img src="Razz-Alice-Field.jpg", class="image4" /> 
+        <img src="Razz-Alice-Barn.jpg", class="image3" /> 
+    <p>
+        Razz is one of the most beloved horses on equestrian club. Her riders absolutely adore her enthusiasm, energy, and excitement. 
+        Razz is never lazy; she spends every moment trying to make her riders as happy as she can. Despite that, she occasionally falls victim
+        to skittishness and clumsiness, which make her a challenging horse to ride. This is especially true during performances at the Iowa Horse 
+        Fair, where unfamiliar enviroments and loud crowds can overwhelm her. Nobody doubts that she'll overcome this someday, and her riders 
+        are devoted to encouraging her to be more brave. Razz belongs to Don Van Dyke. 
+    </p>
+    <h3>Eclipse</h3>
+    <img src="Eclipse-Alissa.jpg", class="image3" /> 
+        <img src="Eclipse-Olivia-Standing.jpg", class="image4" /> 
+        <img src="Eclipse-Olivia-Riding.jpg", class="image3" /> 
+    <p>
+        Everyone agrees that Eclipse was born for drill team. He has Razz' energy but Blue's cheerfulness, the perfect combination for a 
+        confident but quick horse that's eager to please. One of his many nicknames is "Mr. Wiggles," due to his hatred of standing still, and his
+        riders never tire of mocking his goofy facial expressions. He's always on the hunt for new friends, horse and human, and he has been known 
+        to cuddle random strangers. Among his numerous friends is Max, a young colt in Eclipse's field, and ever since they met, Eclipse has 
+        treated Max like his own son. Choosing the cutest horse on equestrian club is difficult (and <strong>highly</strong> controversal), but Eclipse is 
+        certainly in the running. Eclipse is one of Grace's horses. 
+    </p>
+</body>
+</html>

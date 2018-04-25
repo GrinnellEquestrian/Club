@@ -1,0 +1,392 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Join Drill Team</title>
+    <link rel="icon" href="icon.png">
+
+    <style>
+
+        @import url('https://fonts.googleapis.com/css?family=Lato|Rye');
+        /******************************************************************************************/
+        /**********************FOR NAVIGATION BAR**************************************************/
+        /******************************************************************************************/
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 10px;
+            background-color: white;
+        }
+
+        .navbar {
+            overflow: hidden;
+            background-color: #665EC2;
+            font-family: 'Rye', cursive;
+        }
+
+            .navbar a {
+                float: left;
+                font-size: 16px;
+                color: white;
+                background-color: #665EC2;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+        .dropdown {
+            float: left;
+            overflow: hidden;
+            font-family: 'Rye', cursive;
+        }
+
+            .dropdown .dropbtn {
+                font-size: 16px;
+                border: none;
+                outline: none;
+                color: white;
+                padding: 14px 16px;
+                font-family: 'Rye', cursive;
+                background-color: #665EC2;
+            }
+
+            .navbar a:hover, .dropdown:hover .dropbtn {
+                background-color: #dc143c;
+            }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            width: 30%;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+            .dropdown-content .header {
+                background-color: #dc143c;
+                padding: 0px;
+                color: white;
+            }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Create three equal columns that floats next to each other */
+        .column {
+            float: left;
+            width: 100%;
+            padding: 0px;
+            background-color: #dc143c;
+            height: 150px;
+        }
+
+            .column a {
+                float: none;
+                color: white;
+                background-color: #dc143c;
+                padding: 16px;
+                text-decoration: none;
+                display: block;
+                text-align: left;
+            }
+
+                .column a:hover {
+                    background-color: black;
+                }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+        @media (max-width: 600px) {
+            .column {
+                width: 100%;
+                height: auto;
+            }
+        }
+        /******************************************************************************************/
+        /****************************END OF NAVIGATION BAR FORMATTING******************************/
+        /******************************************************************************************/
+
+
+        /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
+        /*^^^^^^^^^^^^^^^^^^^^^^^^^^^HEADERS & PARAGRAPHS^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
+        /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
+        h1 { /*Page title*/
+            font-family: 'Rye', cursive;
+            font-size: 40px;
+            text-shadow: 3px 2px #dc143c;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: 100;
+            line-height: 40px;
+            text-transform: uppercase;
+        }
+
+        h2 {
+            font-family: 'Rye', cursive;
+            font-size: 36px;
+            line-height: 36px;
+            text-shadow: 3px 2px #72ecfa;
+            text-transform: uppercase;
+            font-weight: normal;
+        }
+
+        h3 {
+            font-family: 'Rye', cursive;
+            font-size: 30px;
+            line-height: 30px;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: bold;
+            line-height: 15.4px;
+            text-transform: uppercase;
+            background-color: #dc143c;
+        }
+
+        h4 {
+            font-family: 'Rye', cursive;
+            color: #dc143c;
+            font-size: 25px;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: bold;
+            line-height: 25px;
+            text-transform: uppercase;
+        }
+
+        p {
+            font-family: 'Lato', sans-serif;
+            font-size: 20px;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: 400;
+            line-height: 20px;
+        }
+        /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
+        /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^END OF HEADERS & PARAGRAPHS^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
+        /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
+
+
+        /*----------------------------------------------------------------------------------------*/
+        /*-----------------------------------RESPONSIVE TITLE-------------------------------------*/
+        /*----------------------------------------------------------------------------------------*/
+        @media (max-width: 600px) {
+            /* Styles for screen with max width of 600px */
+            header {
+                height: 250%;
+            }
+
+            .page_title {
+                margin: 0;
+                font-size: 255%;
+            }
+        }
+
+        @media (max-width: 320px) {
+            /* Styles for screen with max width of 320px */
+            header {
+                height: auto;
+            }
+
+            .page_title {
+                margin: 0;
+                font-size: 25px;
+                text-align: center;
+                line-height: 90px;
+            }
+        }
+
+        header {
+            width: 100%;
+            line-height: 1.2;
+        }
+
+        .page_title {
+            font-family: 'Rye', cursive;
+            font-size: 450%;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: 500;
+        }
+        /*----------------------------------------------------------------------------------------*/
+        /*-------------------------END OF RESPONSIVE TITLE FORMATTING-----------------------------*/
+        /*----------------------------------------------------------------------------------------*/
+
+
+        /*########################################################################################*/
+        /*########################## IMAGES ######################################################*/
+        /*########################################################################################*/
+
+
+        .image1 {
+            float: right;
+            width: 35%;
+            margin: 4px 10px 0px 0px;
+            border: 4px solid #665EC2;
+            box-shadow: 4px 4px #72ecfa;
+        }
+        /*RUNNING HORSES NEXT TO BULLET POINTS*/
+        .image2 {
+            width: 379px;
+            float: left;
+            margin: 4px 10px 0px 0px;
+            border: 4px solid #665EC2;
+            box-shadow: 4px 4px #72ecfa;
+        }
+
+        video {
+            border: 4px solid #665EC2;
+            box-shadow: 4px 4px #72ecfa;
+            margin: 0px 10px 0px 0px;
+            float: right;
+        }
+
+
+
+        /*########################################################################################*/
+        /*########################## END OF IMAGES ###############################################*/
+        /*########################################################################################*/
+
+
+        /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+        /*~~~~~~~~~~~~~~~~~~~~~~~~~~ BULLET POINTS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+        /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+        ul.c li {
+            list-style-type: none;
+            font-family: 'lato',sans-serif;
+            margin: 5px;
+            font-size: large;
+        }
+
+        /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+        /*~~~~~~~~~~~~~~~~~~~~~~~ END OF BULLET POINTS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+        /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+    </style>
+</head>
+<body id="#home">
+    <dev class="page_title">Grinnell Equestrian Club & Drill Team</dev>
+
+    <div class="navbar">
+        <a href="pageattempt2.html">Home</a>
+        <!--LESSONS DROPDOWN-->
+        <div class="dropdown">
+            <button class="dropbtn">
+                Lessons
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <div class="row">
+                    <div class="column">
+                        <a href="lessons.html">Taking Lessons</a>
+                        <a href="horses.html">Meet the Horses</a>
+                    </div><!--closing column-->
+                </div><!--closing row-->
+            </div><!--closing dropdown-content-->
+        </div><!--closing dropdown-->
+        <!--DRILL TEAM DROPDOWN-->
+        <div class="dropdown">
+            <button class="dropbtn">
+                Drill Team
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <div class="row">
+                    <div class="column">
+                        <a href="join.html">Join the Team</a>
+                        <a href="intermediate.html">Intermediate Team</a>
+                        <a href="advanced.html">Advanced Team</a>
+                    </div><!--closing column-->
+                </div><!--closing row-->
+            </div><!--closing dropdown-content-->
+        </div><!--closing dropdown-->
+        <a href="events.html">Events</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+
+    </div><!--closing navbar-->
+    <h1>Joining Drill Team</h1>
+    <p>
+        Are you an enthusiastic, hardworking, and skilled rider? Do you love Western riding and being part of a team? Then we want you! We're currently looking for new riders on our intermediate team, but before you contact us, there are
+        some things you should know.
+    </p>
+    <img src="19621275_1811638465518511_3992466687090808853_o.jpg" class="image2" />
+    <h2>FAQ</h2>
+    <h3>What's a drill team?</h3>
+    <p>
+        It's hard to explain, but it's essentially syncronized horseback riding. Our drills are somewhat like marching band routines at football games but without the music and on horseback. It makes more sense if you see a 
+        video; check out some of our previous performances on the "Events" page. 
+    <h3>Do I need to be an experienced rider?</h3>
+    <p>
+        Yes. Please understand that this is not meant to be exclusionary; it's for the safety of all our horses and riders. Drill team is a fast-paced and intense environment. Even horses
+        as well-trained as ours behave differently in practices than in lessons. We don't want to endanger beginner riders by asking them to handle arguing or unruly horses during practice.
+        Lessons are a far better place to get started with horseback riding, and you'll be ready to join drill team before you know it! Some of our members hadn't ridden before they got to Grinnell, but after a semester or two of lessons,
+        many people are prepared to join intermediate team.
+    </p>
+    <h3>Am I experienced enough?</h3>
+    <video width="350" controls autoplay>
+        <source src="Join the Grinnell College Drill Team [360p].mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <p>
+        It's hard to predict. That's why you'll need to try out. But you should be able to lope/canter independently, steer around
+        sharp turns, and have good horsemanship skills. If you've only ridden English, this isn't a problem; many of our drill team members came from English backgrounds. Just be excited and
+        ready to learn western!
+    </p>
+    <h3>Does it cost anything?</h3>
+    <p>
+        This depends on how much funding we receive from the college. Using the horses and arena costs $20 per practice, most of which is covered by the college. Usually, drill team members don't have to pay anything for practices.
+        Last semester, members were asked
+        to pay $5 per practice because the club didn't get enough funding. It has not yet been determined by the college how much funding we will receive this semester, but the cost of drill team
+        will be kept as low as possible because we want to make it accessible for everyone. If cost is a barrier to your joining drill team, let us know, and we will probably be able to make practices
+        free for you. Lessons for drill team members cost the same as lessons for everyone else, but this is also negotiable if you're worried about paying for them.
+    </p>
+    <h3>Is it a big time commitment?</h3>
+    <p>
+        Yes. Riding on either drill team means attending practice and lessons. This totals 2.5-3 hours on a horse per week. Then there's catching, tacking, warming up, cooling down, untacking, and turning out horses each ride.
+        Expect that to take around 2 hours per week. To recap, we've reached 4.5-5 hours, and that's not including the barn chores, extra meetings, and other commitments. Being a member of advanced team is, in general, more time consuming
+        than intermediate team, so the 4.5 hour estimate is more accurate for intermediate team. <br /><br />Missing practice is highly frowned upon, since it's hard to ride in sync with someone who isn't there! Very few members have ever
+        missed a practice. However, if you are too sick to ride or are in a similarly unavoidable situation, allowances can be made. Schoolwork is not an acceptable reason to miss practice.
+        <br /><br />
+        Attending the Iowa Horse Fair can require missing class, depending on what days the fair will be. But it's all worth it!
+
+        <br /><br />Here's a more detailed description of drill team policies:<br />
+        <a href="Drill Team Lesson and Practice Policies.pdf" download>
+            <img border="0" src="drillButton.jpg" alt="Download Drill Team Policies" width=25% />
+        </a>
+
+    </p>
+
+    <h3>What's the difference between the teams?</h3>
+    <p>
+        Intermediate drill team has simpler drills, is slower paced, and is a smaller time commitment than advanced team. In other words... <br /><br />The majority of intermediate team drills are trotting,
+        whereas most advanced team drills have a lot of loping. It is expected that advanced team riders have experience performing some of the simpler moves, such as pinwheels and suicide passes.
+        However, intermediate team doesn't expect any drill team experience of its members, and everything will be more thoroughly explained.
+        <br /><br />Riding on advanced team is more time consuming than riding
+        on intermediate team because advanced team practices are a half hour longer than intermediate team practices. Advanced team riders are often expected to ride at least 3 times a week (as opposed to
+        two times per week, which is the requirement for intermediate team members), and advanced team riders typically dedicate more time to non-riding activities, such as bake sales and tabling.
+        <br /><br />Riders on intermediate team aren't necessarily less experienced riders; in fact, <strong>
+            if you're new to drill team, expect to be placed on intermediate team, regardless of prior horse
+            experience.
+        </strong> This is because riding on a drill team is a specific skill. Being a great roper doesn't mean you're good at saddleseat; likewise, being great at other sports doesn't
+        mean that you're good at riding on a drill team. Even if you can lope your horse for miles at home, if you've never ridden on a drill team, you're probably not ready
+        to lope in a drill team setting.
+        <img src="drillteamhuddle.jpg" class="image1" />
+        <br /><br /> Moving from one team to another is easy, and many riders spend only one year on intermediate team before moving to advanced. When there's room on both teams, some
+        members have also chosen to ride on both. After all, both teams have loads of fun, and riders can learn a lot from being on either!
+    </p>
+
+    <h2>Want to try out?</h2>
+    <p>
+        Great, we'd love to have you! We accept new members for the first few weeks of every semester. To join, send us an email at equestrian@grinnell.edu. If it's currently the middle of the semester, there might still be room for you!
+        Just send us an email and ask. If not, we're sorry, and we'll be happy to welcome you next semester.
+    </p>
+</body>
+</html>
