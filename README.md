@@ -1,5 +1,5 @@
 # Equestrian Club and Drill Team Website Repository
-A website for the Grinnell College Equestrian Club and Drill Team
+A website for the Grinnell College Equestrian Club and Drill Team. Link: https://grinnellequestrian.github.io/Club/
 ## Code
 Written by a student without Bootstrap or similar programs; only used HTML, CSS, and notepad. 
 ## Contributors
